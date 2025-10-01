@@ -55,4 +55,3 @@ mayor_que_30 = df.loc[df["edad"]>30,:]
 print("Contenido de df: \n\n", df, "\n")
 print("Contenido de los df concatenado: \n\n", df_concatenado, "\n")
 print("Contenido de los registros >30: \n\n", mayor_que_30, "\n")
-

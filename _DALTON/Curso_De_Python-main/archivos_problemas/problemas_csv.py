@@ -1,6 +1,7 @@
 #cambiar el tipo de dato de una columna
 import pandas as pd
-df = pd.read_csv("archivos_problemas\\datos.csv")
+
+df = pd.read_csv("_DALTON\\Curso_De_Python-main\\archivos_problemas\\datos.csv")
 
 #convertir a string los datos de una columna
 df['edad'] = df['edad'].astype(str)
@@ -9,7 +10,7 @@ df['edad'] = df['edad'].astype(str)
 #print(type(df['edad'][0]))
 
 #remplazando los datos "dalto" por "Maestro"
-df['apellido'].replace("dalto","maestro",inplace=True)
+df['apellido'].replace("dalto","ramirez",inplace=True)
 
 #eliminando las filas con datos faltantes
 df = df.dropna()
@@ -18,8 +19,9 @@ df = df.dropna()
 df = df.drop_duplicates()
 
 #creando un CSV con el dataframe resultante (limpio)
-df.to_csv("archivos_problemas\\datos_limpios.csv")
+df.to_csv("_DALTON\\Curso_De_Python-main\\archivos_problemas\\datos_limpios.csv")
 
+print(df)
 
 
 

@@ -1,17 +1,18 @@
 import pandas as pd
+import numpy as np
 
 #usando la funcion read_csv para leer el archivo CSV
-df = pd.read_csv("archivos\\datos.csv")
-df2 = pd.read_csv("archivos\\datos.csv")
+df = pd.read_csv("_DALTON\\Curso_De_Python-main\\archivos\\datos.csv")
+df2 = pd.read_csv("_DALTON\\Curso_De_Python-main\\archivos\datos.csv")
 
 #obteniendo los datos de la columna nombre
 nombres = df["nombre"]
 
 #ordenando el dataframe por la edad
-df_orden_ascendente = df.sort_values("edad")
+df_orden_ascendente = df.sort_values("edad",ascending=False)
 
 #ordeandolo de forma descendente
-df_orden_descendente = df.sort_values("edad",ascending=False)
+#df_orden_descendente = df.sort_values("edad",ascending=False)
 
 #concatenando los 2 dataframes
 df_concatenado = pd.concat([df,df2])
@@ -49,8 +50,9 @@ fila_3 = df.iloc[2,:]
 #accediendo a filas con edad mayor que 30 con loc
 mayor_que_30 = df.loc[df["edad"]>30,:]
 
-print(mayor_que_30)
+# print(mayor_que_30)
 
-
-
+print("Contenido de df: \n\n", df, "\n")
+print("Contenido de los df concatenado: \n\n", df_concatenado, "\n")
+print("Contenido de los registros >30: \n\n", mayor_que_30, "\n")
 

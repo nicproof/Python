@@ -1,6 +1,6 @@
 #importando un modulo y asignandole el nombre "m_saludar"
 #import modulo_saludar as m_saludar
-
+import sys
 #desde ese modulo, importamos dos funciones y les cambiamos el nombre
 from modulo_saludar import saludar as saludar_normal,saludar_raro as saludar_como_coscu
 

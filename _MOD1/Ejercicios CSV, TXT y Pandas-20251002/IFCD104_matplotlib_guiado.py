@@ -90,7 +90,7 @@ def barras_colormap_segun_valor():
     plt.ylabel("Valor")
     sm = cm.ScalarMappable(cmap=colormap, norm=norm)
     sm.set_array([])
-    fig, ax = plt.subplots() 
+    fig, ax = plt.gcf(), plt.gca()
     # plt.colorbar(sm, label="Valor")
     plt.colorbar(sm, ax=ax, label="Valor")
     plt.tight_layout()

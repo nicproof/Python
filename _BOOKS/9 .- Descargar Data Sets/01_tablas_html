@@ -1,0 +1,38 @@
+from __future__ import annotations
+
+import pandas as pd
+import requests
+from typing import List
+
+def ejemplo_tablas_html(url: str = "https://es.wikipedia.org/wiki/Anexo:Pa%C3%ADses_por_poblaci%C3%B3n") -> List[pd.DataFrame]:
+    print(f"[HTML] Descargando tablas desde: {url}")
+    
+    # 1. Definir un User-Agent para simular un navegador real
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+    }
+    
+    try:
+        # 2. Usar requests para obtener el contenido con los headers
+        respuesta = requests.get(url, headers=headers)
+        respuesta.raise_for_status() # Lanza un error para códigos de estado 4xx/5xx
+        
+        # 3. Pasar el contenido HTML directamente a pandas.read_html
+        tablas = pd.read_html(respuesta.text)
+        
+        print(f"[HTML] Tablas encontradas: {len(tablas)}")
+        if tablas:
+            print("[HTML] Vista previa de la primera tabla:")
+            print(tablas[0].head())
+        return tablas
+    
+    except requests.exceptions.HTTPError as err_h:
+        # Error específico si falla la solicitud HTTP (como el 403)
+        print(f"[HTML][ERROR] Error HTTP (Verificación de Bot/403): {err_h}")
+        return []
+    except Exception as e:
+        # Otros errores (ej. error de parsing de tablas)
+        print(f"[HTML][ERROR] Error al leer o procesar las tablas: {e}")
+        return []
+
+ejemplo_tablas_html()

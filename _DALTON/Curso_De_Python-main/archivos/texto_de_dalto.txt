@@ -1,4 +1,21 @@
- - Hola maestro como andas
- - misericordia
- - no se porque dijiste eso
- - yo tampoco
+SUPERVISADO -> DETECCIÓN DE MANUSCRITOS HISTORICOS FALSIFICADOS
+clasifica / etiqueta
+Se centra en ajustar un modelo (calibrar) para medir una variable continua (regresar) o emitir una probabilidad/puntuación (puntuar) para la etiqueta correcta.
+
+
+
+NO SUPERVISADO -> IDENTIFICACIÓN DE PATRONES DE CONSUMO INEFICIENTE DE ENERGIA EN INSTALACIONES INDUSTRIALES
+descubre/desglosa
+Se enfoca en desglosar (decomponer) la complejidad del dato, medir las frecuencias o densidades (cuantificar), o separar las anomalías (aislar).
+
+
+
+SEMI-SUPERVISADO -> CLASIFICACION DE COMENTARIOS EN REDES SOCIALES PARA ANÁLISIS DE SENTIMIENTOS
+reflexiona
+Utiliza la información inicial para aumentar (amplificar) el conocimiento, a menudo revisando las predicciones varias veces (iterar) para autocorregir (reflexionar) el modelo.
+
+
+
+POR REFUERZO -> OPTIMIZACION DE LA EVACUACION DE MULTITUDES
+actúa / decide / simula
+El agente aprende basándose en el valor de sus acciones, recibiendo castigo (sancionar) o beneficio (recompensar), generalmente dentro de un modelo virtual (simular).

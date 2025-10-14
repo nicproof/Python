@@ -8,7 +8,7 @@ from scipy.stats import chisquare
 
 # FUNCIÓN ORIGINAL obtener_info_dataset
 
-def obtener_info_dataset(nombre_archivo, separador=';'):
+def obtener_info_dataset(nombre_archivo, separador=';', encoding='utf-8'):
     # ... (El código de la función obtener_info_dataset permanece sin cambios) ...
     # Nota: He añadido 'separador' como argumento para mayor flexibilidad.
 
